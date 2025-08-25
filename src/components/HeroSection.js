@@ -4,6 +4,7 @@ import WhyChooseSection from "./WhyChoose";
 import WhatWeOffer from "./WhatWeOffer";
 import TechnologiesSection from "./TechnologiesSection";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,11 @@ const HeroSection = () => {
             scalable software that drives business success.
           </p>
           <div className="text-center">
+            <Link to={"/services"} >
           <button className="mt-6 bg-[#5a86c5]  hover:bg-[#4871a8] transition px-6 py-2 rounded text-white font-medium">
             Explore Services
           </button>
+          </Link>
           </div>
         </div>
 
