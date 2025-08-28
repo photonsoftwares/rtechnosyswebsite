@@ -2,6 +2,23 @@ import React from 'react'
 import Footer2 from '../Footer2'
 
 const ServicesDashboard = () => {
+
+  const cards = [
+  {
+    id: 1,
+    img: "/ahad.png",
+  },
+  {
+    id: 2,
+    img: "/dashboard.png",
+  },
+  {
+    id: 3,
+    img: "/food.png",
+  },
+];
+
+
   return (
     <>
     <div className="bg-[#f7f6e2] font-serif min-h-screen mt-24 flex flex-col items-center justify-center px-6">
@@ -58,17 +75,26 @@ const ServicesDashboard = () => {
 
         {/* Cards */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+  {cards.map((card) => (
+    <div
+      key={card}
+      className="relative bg-gray-100 rounded-xl h-56 overflow-hidden"
+    >
+      {/* Image */}
+      <img
+        src={card.img} // ✅ change path as per your public folder
+      
+        className="w-full h-full object-cover"
+      />
+
+      {/* Button Overlay */}
+       <button className="absolute bottom-4 left-1/2 -translate-x-1/2 border border-white text-white px-6 py-1 rounded-full bg-black/50">
+            View
+          </button>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
 
@@ -86,23 +112,10 @@ const ServicesDashboard = () => {
         </p>
 
         {/* Sub-heading */}
-        <h3 className="mt-10 text-xl font-medium">
-          Relevant projects and case studies
-        </h3>
+       
 
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+       
       </div>
     </div>
 
@@ -119,23 +132,10 @@ const ServicesDashboard = () => {
         </p>
 
         {/* Sub-heading */}
-        <h3 className="mt-10 text-xl font-medium">
-          Relevant projects and case studies
-        </h3>
+       
 
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+       
       </div>
     </div>
 
@@ -152,23 +152,9 @@ const ServicesDashboard = () => {
         </p>
 
         {/* Sub-heading */}
-        <h3 className="mt-10 text-xl font-medium">
-          Relevant projects and case studies
-        </h3>
-
+       
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+      
       </div>
     </div>
 
@@ -185,23 +171,9 @@ const ServicesDashboard = () => {
         </p>
 
         {/* Sub-heading */}
-        <h3 className="mt-10 text-xl font-medium">
-          Relevant projects and case studies
-        </h3>
-
+       
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+      
       </div>
     </div>
 
@@ -217,23 +189,10 @@ const ServicesDashboard = () => {
         </p>
 
         {/* Sub-heading */}
-        <h3 className="mt-10 text-xl font-medium">
-          Relevant projects and case studies
-        </h3>
+       
 
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((card) => (
-            <div
-              key={card}
-              className="bg-gray-100 rounded-xl h-56 flex items-end justify-center p-6"
-            >
-              <button className="border border-gray-500 text-gray-700 px-6 py-1 rounded-full hover:bg-gray-200 transition">
-                View
-              </button>
-            </div>
-          ))}
-        </div>
+      
       </div>
     </div>
       

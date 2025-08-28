@@ -70,7 +70,7 @@ export default function TechnologiesSection() {
           <p className="text-gray-600 text-sm text-left">
             Email us
           </p>
-           <p className="font-medium text-sm ">rtechnosynlab@gmail.com</p>
+           <p className="font-medium text-sm ">rtechnosyslab@gmail.com</p>
            </div>
            <div>
           <p className="text-gray-600 text-sm text-left">

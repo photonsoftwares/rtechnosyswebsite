@@ -6,44 +6,51 @@ import { Mail } from "lucide-react";
 const InsightsGuides = () => {
   const categories = ["Guides and Tutorials", "Industry News", "Case Studies", "Tips and Tricks"];
 
-  const articles = [
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-    {
-      title: "How to create an image to text converter using Python?",
-      category: "Case Studies",
-      date: "Aug 7, 2025",
-      readTime: "6 minute Read",
-    },
-  ];
+ const articles = [
+  {
+    title: "How to create an image to text converter using Python?",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/1.jpg"
+  },
+  {
+    title: "How to develop a receipt scanner app for expense tracking?",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/2.jpg"
+  },
+  {
+    title: "How to build an app that reads text from images and translates it?",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/3.png"
+  },
+  {
+    title: "How to digitize old handwritten notes into editable Word files?",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/4.jpg"
+  },
+  {
+    title: "How to digitize old handwritten notes into editable Word files?",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/5.png"
+  },
+  {
+    title: "How to create an app that extracts medicine names from prescriptions",
+    category: "Case Studies",
+    date: "Aug 7, 2025",
+    readTime: "6 minute Read",
+    img: "/6.png"
+  }
+];
+
 
   return (
     <>
@@ -112,7 +119,9 @@ const InsightsGuides = () => {
       <div key={index} className="bg-[#002D72] w-80 m-auto text-white rounded-xl shadow-md overflow-hidden">
         {/* Placeholder for Image */}
         <div className="h-60 w-full flex justify-center items-center bg-[#002D72]">
-  <div className="w-64 h-52 bg-gray-400"></div> 
+  <div className="w-64 h-52">
+    <img src={article.img} alt=""  className="w-full h-full object-cover rounded-lg" />
+    </div> 
 </div>
 
         {/* Content */}
@@ -138,9 +147,7 @@ const InsightsGuides = () => {
 
   {/* Load More Button */}
   <div className="flex justify-center mt-8">
-    <button className="py-2 px-6 rounded-2xl bg-blue-300 hover:bg-blue-400">
-      Load more
-    </button>
+   
   </div>
 </div>
 
