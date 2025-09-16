@@ -6,3 +6,58 @@
 @import "@fontsource/poppins/500.css";
 @import "@fontsource/poppins/600.css";
 @import "@fontsource/poppins/700.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fade Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Left */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade Right */
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Common utility classes */
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.animate-fadeLeft {
+  animation: fadeLeft 0.8s ease-out forwards;
+}
+.animate-fadeRight {
+  animation: fadeRight 0.8s ease-out forwards;
+}

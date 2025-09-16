@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+        // optional: keep a serif fallback for general serif use:
+        serif: ['"Playfair Display"', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
       },
     },
   },
