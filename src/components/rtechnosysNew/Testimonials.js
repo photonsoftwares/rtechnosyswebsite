@@ -14,7 +14,7 @@ const Testimonials = () => {
     {
       text: "Rtechnosys transformed our business idea into a fully functional app within weeks. The team was professional, transparent, and always available when we needed support.",
       name: "Ariana Collins",
-      role: "Small Business Owner",
+      role: "Ariana Collins",
       image:
         "ariana.png", // Replace with actual image
       rating: 5,
@@ -22,7 +22,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f9fbff] py-16 relative">
+    <section className="w-full bg-[#f9fbff] py-16 px-4 md:px-6 lg:px-8 relative">
       {/* Top Section */}
       <div className="text-center mb-12">
         <span className="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
@@ -37,56 +37,69 @@ const Testimonials = () => {
       </div>
 
       {/* Testimonials Cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative px-4 sm:px-0">
         {testimonials.map((t, index) => (
           <div
             key={index}
-            className="bg-white p-8 rounded-2xl shadow-md relative"
+            className="bg-white p-6 sm:p-8 rounded-2xl shadow-md relative"
           >
             {/* Quote Icon */}
-            <FaQuoteLeft className="text-blue-600 text-3xl mb-4" />
+            <FaQuoteLeft className="text-blue-600 text-2xl sm:text-3xl mb-4" />
 
             {/* Testimonial Text */}
-            <p className="text-gray-700 leading-relaxed mb-6">{t.text}</p>
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">{t.text}</p>
 
             {/* User Info */}
             <div className="flex items-center gap-4">
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
               />
               <div>
-                <h4 className="font-semibold">{t.name}</h4>
-                <p className="text-gray-500 text-sm">{t.role}</p>
+                <h4 className="font-semibold text-sm sm:text-base">{t.name}</h4>
+                <p className="text-gray-500 text-xs sm:text-sm">{t.role}</p>
               </div>
             </div>
 
             {/* Rating */}
-            <div className="absolute bottom-6 right-8 text-gray-600 flex items-center gap-1">
-              <img
-                src="google.png"
-                alt="Google"
-                className="w-5 h-5"
-              />
-              <span className="text-sm font-medium">Google</span>
-              <span className="ml-2 text-yellow-500">★★★★★</span>
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-8 text-gray-600 flex flex-col sm:flex-row items-end sm:items-center gap-1">
+              <div className="flex items-center gap-1">
+                <img
+                  src="google.png"
+                  alt="Google"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
+                />
+                <span className="text-xs sm:text-sm font-medium">Google</span>
+              </div>
+              <span className="ml-0 sm:ml-2 text-yellow-500 text-xs sm:text-sm">★★★★★</span>
             </div>
           </div>
         ))}
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-        <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 shadow bg-white hover:bg-blue-600 hover:text-white transition">
+      <div className="flex justify-center mt-8 md:hidden">
+        <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 shadow bg-white hover:bg-blue-600 hover:text-white transition mr-4">
           <FaArrowLeft />
         </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
         <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 shadow bg-white hover:bg-blue-600 hover:text-white transition">
           <FaArrowRight />
         </button>
       </div>
+
+      {/* For desktop, keep the original arrows */}
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 hidden md:block">
+        <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 shadow bg-white hover:bg-blue-600 hover:text-white transition">
+          <FaArrowLeft />
+        </button>
+      </div>
+      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 hidden md:block">
+        <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 shadow bg-white hover:bg-blue-600 hover:text-white transition">
+          <FaArrowRight />
+        </button>
+      </div>
+
     </section>
   );
 };
